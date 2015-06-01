@@ -30,7 +30,7 @@ printf( "pivot = [%d]:%d\n", k, data[k] );
 printf( "i:%d  k: %d\n", i, k );
         if( data[i] < data[0] )
         {
-            swap( data, ++k, i ); // inefficent if data[1] > data[pivot] --> swap with itself!
+            swap( data, ++k, i ); // inefficient if data[1] > data[pivot] --> swap with itself!
 dump( N, data );
         }
     }
