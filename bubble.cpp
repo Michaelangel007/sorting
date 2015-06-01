@@ -1,17 +1,8 @@
+/*
+  g++ bubble.cpp -o bubble
+*/
 #include <stdio.h>
-// g++ bubble.cpp -o bubble
-
-// ========================================================================
-void dump( const int N, const int *data )
-{
-    for( int i = 0; i < N; i++ )
-#if 0
-        printf( "%d ", data[i] );
-#else
-        printf( "[%d]:%d %.*s\n", i, data[i], data[i], "*****" );
-#endif
-printf( "\n" );
-}
+#include "util.h"
 
 // bubblesort
 // ========================================================================
@@ -19,23 +10,20 @@ void sort( const int N, int *data )
 {
     for( int i = 0; i < N; i++ )
     {
-        bool swap = false;
+        bool swapped = false;
         for( int j = N-1; j > i; j-- )
         {
 printf( "i:%d  j: %d\n", i, j );
             if( data[j] < data[j-1] )
             {
-                    swap = true;           
-printf( "swap [%d]:%d > [%d]:%d\n", j-1, data[j-1], j, data[j] );
-                int temp = data[j-1];
-                           data[j-1] = data[j];
-                                       data[j] = temp;
+                swapped = true;
+                swap( data, j-1, j );
 dump( N, data );
             }
         }
 printf( "sorted [%d]\n", i );
 printf( "\n" );
-        if( !swap )
+        if( !swapped )
             break;
     }
 }
