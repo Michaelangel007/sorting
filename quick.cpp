@@ -11,7 +11,7 @@ Reference:
 // ========================================================================
 void sort( const int N, int *data )
 {
-    if( N <= 1 )
+    if( N <= 1 ) // BUGFIX: original algorithm does not include recursion termination
         return;
 printf( "N=%d\n", N );
 
