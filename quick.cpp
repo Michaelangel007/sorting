@@ -8,6 +8,8 @@ Reference:
 
 // quick (with 2 partitions)
 // Note: The common implementation uses a left and right index (this doesn't)
+// For faster implementations see:
+//   http://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Quicksort#C
 // ========================================================================
 void sort( const int N, int *data )
 {
