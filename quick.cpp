@@ -1,10 +1,13 @@
 /*
-  g++ quick.cpp -o quick
+    g++ quick.cpp -o quick
+Reference:
+    http://www.sorting-algorithms.com/quick-sort
 */
 #include <stdio.h>
 #include "util.h"
 
-// selection
+// quick (with 2 partitions)
+// Note: The common implementation uses a left and right index (this doesn't)
 // ========================================================================
 void sort( const int N, int *data )
 {
@@ -27,7 +30,7 @@ printf( "pivot = [%d]:%d\n", k, data[k] );
 printf( "i:%d  k: %d\n", i, k );
         if( data[i] < data[0] )
         {
-            swap( data, ++k, i ); // inefficent if data[1] > data[pivot], swap with itself!
+            swap( data, ++k, i ); // inefficent if data[1] > data[pivot] --> swap with itself!
 dump( N, data );
         }
     }
@@ -47,8 +50,8 @@ printf( "\n" );
 int main()
 {
     /* */ int src[] = { 3, 4, 2, 1 };
-//int src[] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-//int src[] = { 9, 7, 5, 3, 1, 2, 4, 6, 8 }; // left side
+//int src[] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 }; // reverse
+//int src[] = { 9, 7, 5, 3, 1, 2, 4, 6, 8 }; // alternating reverse and forward
     const int len   = sizeof( src ) / sizeof( int );
 
     dump( len, src );

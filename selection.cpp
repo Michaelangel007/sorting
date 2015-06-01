@@ -1,5 +1,7 @@
 /*
-  g++ selection.cpp -o selection
+    g++ selection.cpp -o selection
+Reference:
+    http://www.sorting-algorithms.com/selection-sort
 */
 #include <stdio.h>
 #include "util.h"
@@ -27,6 +29,8 @@ printf( "\n" );
 int main()
 {
     /* */ int src[] = { 3, 4, 2, 1 };
+//int src[] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 }; // reverse
+//int src[] = { 9, 7, 5, 3, 1, 2, 4, 6, 8 }; // alternating reverse and forward
     const int len   = sizeof( src ) / sizeof( int );
 
     dump( len, src );
