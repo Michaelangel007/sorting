@@ -5,7 +5,7 @@ void dump( const int N, const int *data )
 #if 0
         printf( "%d ", data[i] );
 #else
-        printf( "[%d]:%d %.*s\n", i, data[i], data[i], "*****" );
+        printf( "[%d]:%d %.*s\n", i, data[i], data[i], "**********" );
 #endif
 printf( "\n" );
 }
