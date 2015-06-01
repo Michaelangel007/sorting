@@ -7,6 +7,8 @@ Reference:
 #include "util.h"
 
 // quick (with 2 partitions)
+// For a good explanation:
+//   http://me.dt.in.th/page/Quicksort/
 // Note: The common implementation uses a left and right index (this doesn't)
 // For faster implementations see:
 //   http://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Quicksort#C
